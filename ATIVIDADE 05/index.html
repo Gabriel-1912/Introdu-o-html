@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 900px;
+    margin: 0;
+}
+
+form{
+    background-color: rgb(255, 255, 255);
+
+    width: 90%;
+    max-width: 500px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h1{
+    text-align: center;
+    color: #3b3b3b;
+    margin-bottom: 20px;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea{
+    width: 100%;
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea{
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    border-color: rgb(0, 0, 255);
+}
+
+.opcoes{
+    margin-top: 8px;
+}
+
+.opcoes label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+.opcoes input{
+    width: auto;
+}
+
+.botoes{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.botoes button{
+    flex: 1;
+}
+
+button{
+    padding: 10px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.enviar{
+    background-color: rgb(0, 0, 255);
+}
+
+.limpar{
+    background-color: rgb(255, 0, 0);
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+@media(max-width: 600px){
+
+    .botoes{
+        flex-direction: column;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<form>
+
+    <h1>Cadastro</h1>
+
+    <label for="nome">Nome</label>
+    <input type="text" id="nome">
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email">
+
+    <label for="senha">Senha</label>
+    <input type="password" id="senha">
+
+    <label for="data">Data de Nascimento</label>
+    <input type="date" id="data">
+
+    <label for="curso">Curso</label>
+    <select id="curso">
+        <option>ADS</option>
+        <option>Engenharia de Software</option>
+        <option>Ciência da Computação</option>
+    </select>
+
+    <label>Sexo</label>
+    <div class="opcoes">
+        <label>
+            <input type="radio" name="sexo">
+            Masculino
+        </label>
+
+        <label>
+            <input type="radio" name="sexo">
+            Feminino
+        </label>
+    </div>
+
+    <label>Interesses</label>
+    <div class="opcoes">
+        <label>
+            <input type="checkbox">
+            HTML
+        </label>
+
+        <label>
+            <input type="checkbox">
+            CSS
+        </label>
+
+        <label>
+            <input type="checkbox">
+            JavaScript
+        </label>
+    </div>
+
+    <label for="comentarios">Comentários</label>
+    <textarea id="comentarios" rows="4"></textarea>
+
+    <label for="foto">Upload de Foto</label>
+    <input type="file" id="foto">
+
+    <div class="botoes">
+        <button type="submit" class="enviar">Enviar</button>
+        <button type="reset" class="limpar">Limpar</button>
+    </div>
+
+</form>
+
+</body>
+</html>
